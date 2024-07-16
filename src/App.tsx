@@ -1,10 +1,9 @@
-import { useRef, useState } from 'react'
 import './App.css'
-import Header from './components/header';
-import Skills from './components/skills';
+import Header from './header';
+import Skills from './skills';
 
 function App() {
-
+  
 
 
   return (

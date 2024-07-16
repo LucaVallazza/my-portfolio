@@ -1,4 +1,4 @@
-import TWSIZE from "./tw-size";
+import TWSIZE from "./components/tw-size";
 
 const Header = () => {
   return (
