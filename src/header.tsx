@@ -15,7 +15,7 @@ const Header = () => {
         </div>
 
         <div className="hidden sm:flex w-2/5 lg:h-[85%] relative h-full mt-auto mb-0  justify-center">
-          <img src="../public/NoBG_Cuadradita.png" className="object-cover overflow-hidden"></img>
+          <img src="./NoBG_Cuadradita.png" className="object-cover overflow-hidden"></img>
         </div>
 
       </div>
