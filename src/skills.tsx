@@ -55,17 +55,6 @@ const Skills = () => {
     },
   ];
 
-  const [widthMultiplier, setWidthMultiplier] = useState(1.0);
-  
-  useEffect(() => {
-    addEventListener("resize", () => {
-      window.innerWidth < 600 ?  setWidthMultiplier(1.5) : setWidthMultiplier (1.0);
-
-    });
-    return () => {
-      
-    };
-  }, []);
 
   return (
     <div className="bg-slate-800 w-full flex flex-row justify-center pt-4 pb-10 xl:pt-14 xl:pb-24">
