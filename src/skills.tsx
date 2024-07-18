@@ -1,6 +1,5 @@
 import { Braces, Database, LucideProps, Palette } from "lucide-react";
 import ProgressBar from "./components/progress-bar";
-import { useEffect, useState } from "react";
 import Heading from "./components/heading";
 import './skills.css'
 
@@ -21,6 +20,7 @@ interface ISkills {
 
 
 const Skills = () => {
+  
   const skills: ISkills[] = [
     {
       title: "Front end",
