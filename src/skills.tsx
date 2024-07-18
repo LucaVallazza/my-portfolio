@@ -1,6 +1,9 @@
 import { Braces, Database, LucideProps, Palette } from "lucide-react";
 import ProgressBar from "./components/progress-bar";
 import { useEffect, useState } from "react";
+import Heading from "./components/heading";
+import './skills.css'
+
 
 interface IItem {
   name: string;
@@ -14,6 +17,8 @@ interface ISkills {
   >;
   items: IItem[];
 }
+
+
 
 const Skills = () => {
   const skills: ISkills[] = [
@@ -42,9 +47,10 @@ const Skills = () => {
       title: "Lenguajes",
       titleIcon: Braces,
       items: [
-        { name: "C/C#/C++", level: 7, exp: 4 },
+        { name: "C/C#/C++", level: 8, exp: 4 },
         { name: "JavaScript", level: 7, exp:3 },
-        { name: "Typescript", level: 7, exp:2 },
+        { name: "Typescript", level: 8, exp:2 },
+        { name: "Python", level: 5.5, exp:2 },
       ],
     },
   ];
@@ -62,24 +68,25 @@ const Skills = () => {
   }, []);
 
   return (
-    <div className="bg-red-800 w-full flex flex-row justify-center pt-4 pb-10 xl:pt-10 xl:pb-26">
-      <div className="flex flex-col items-center justify-center w-full sm:w-4/5 xl:w-[70%] 2xl:w-[60%]">
+    <div className="bg-slate-800 w-full flex flex-row justify-center pt-4 pb-10 xl:pt-14 xl:pb-24">
+      <div className="flex flex-col items-center justify-center w-full sm:w-4/5 xl:w-[80%] 2xl:w-[80%]">
         
-        <h1 className="text-center text-[2em] sm:text-[3em] mb-6 sm:mb-10 ">Habilidades</h1>
+        <Heading>Habilidades</Heading>
 
         <div className="flex flex-row justify-around w-full">
 
           {skills.map((s) => (
-            <div className="flex-1 px-3 lg:px-10 2xl:px-20 flex flex-col  justify-start sm:items-center">
-              <div className="flex flex-col sm:flex-row items-center mb-2">
+            <div className="flex-1 px-3  lg:px-10 2xl:px-16 flex flex-col   justify-start sm:items-center ">
+              <div className="flex flex-col sm:flex-row items-center mb-2 ">
                 <s.titleIcon size={22} className="sm:mr-2 block "></s.titleIcon>
-                <h3 className="text-sm text-center sm:text-lg xl:text-2xl font-bold ">{s.title}</h3>
+                <h3 className="text-sm text-center sm:text-lg xl:text-2xl font-semibold">{s.title}</h3>
               </div>
               <ul className="w-full">
                 {s.items.map((item) => {
                   return (
                     <>
-                      <li className="mb-1 md:mb-2">
+                      <li className="mb-1 md:mb-2 skill transition-all transition-transform duration-800"
+                      style={{ backfaceVisibility: "hidden" } as React.CSSProperties}  >
                         <div className="flex flex-row text-xs sm:text-[1em] sm:pb-1 justify-between">
                           <div>{item.name}</div>
                           <div className="text-gray-300 block italic text-[0.75em] sm:text-[0.7em]">

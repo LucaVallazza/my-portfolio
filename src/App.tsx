@@ -1,3 +1,4 @@
+import AboutMe from './about-me';
 import './App.css'
 import Header from './header';
 import Skills from './skills';
@@ -7,10 +8,14 @@ function App() {
 
 
   return (
-    <main className='h-[100vh]'>
-      <Header></Header>
-      <Skills></Skills>
+    <main className='h-full w-full flex flex-col items-center bg-slate-900'>
+      <div className='lg:w-[80%] shadow-2xl shadow-black'>
 
+        <Header ></Header>
+        <Skills></Skills>
+        <AboutMe></AboutMe>
+
+      </div>
     </main>
   )
 }

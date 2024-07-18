@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import './progress-bar.css'
 
 interface IProps {
     progress : number;
@@ -21,8 +22,11 @@ const ProgressBar = ({progress} : IProps) => {
 
     return ( 
         <>
-        <div className="w-full h-2 rounded-xl bg-red-50">
-         <div className={`bg-orange-400 duration-[1400ms] transition-all bright ease-in-out rounded-r-md rounded-l-xl h-2 w-[var(--progress)] `} 
+        <div className="w-full h-2 rounded-xl duration-[800ms] transition-all ease-in-out bar bg-red-50">
+         <div className={`bg-orange-500 duration-[800ms] transition-all  ease-in-out rounded-r-md rounded-l-xl h-2 w-[var(--progress)] 
+        
+         progressBar
+         `} 
               style={{ "--progress" : `${width}%` } as React.CSSProperties}
          ></div>
         </div>

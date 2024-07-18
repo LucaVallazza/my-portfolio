@@ -2,9 +2,9 @@ import TWSIZE from "./components/tw-size";
 
 const Header = () => {
   return (
-    <header className="bg-red-500 flex flex-row justify-center">
+    <header className="bg-slate-600 flex flex-row justify-center pt-2 ">
     <TWSIZE></TWSIZE>
-      <div className=" flex flex-row text-center justify-center w-full h-[40vh] xl:h-[50vh] xl:w-[70%] ">
+      <div className=" flex flex-row text-center justify-center w-full h-[40vh] xl:h-[50vh] sm:w-[80%] ">
 
         <div className="h-full flex flex-col align-items-center justify-center sm:w-3/5 p-6 sm:p-14 sm:pr-0  xl:p-24 lg:space-y-4 ">
           <h1 className="font-bold text-left ">
