@@ -58,7 +58,7 @@ const Skills = () => {
   const [widthMultiplier, setWidthMultiplier] = useState(1.0);
   
   useEffect(() => {
-    addEventListener("resize", (event) => {
+    addEventListener("resize", () => {
       window.innerWidth < 600 ?  setWidthMultiplier(1.5) : setWidthMultiplier (1.0);
 
     });
