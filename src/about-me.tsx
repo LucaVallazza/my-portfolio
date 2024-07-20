@@ -21,12 +21,11 @@ const AboutMe = () => {
         <p className="w-[90%] sm:w-[80%] text-[1.2em] md:text-lg mt-2 md:mt-4">
           Durante mi recorrido trabajé con distintos entornos y frameworks como{" "}
           <span className="text-orange-500 font-semibold">
-            Unity, .NET, Jupyter, React
+            Unity, .NET, Jupyter, React , entre otros.{" "}
           </span>
-          , entre otros. Además, desde hace 3 años me llaman la atención los
-          mercados de capitales, por lo que terminé indagando en el desarrollo
-          de robots de trading, indicadores técnicos y testing de estrategias
-          utilizando{" "}
+          Además, desde hace 3 años me llaman la atención los mercados de
+          capitales, por lo que terminé indagando en el desarrollo de robots de
+          trading, indicadores técnicos y testing de estrategias utilizando{" "}
           <span className="text-orange-500 font-semibold">
             PineScript, MQL4 y Python
           </span>
