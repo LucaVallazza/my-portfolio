@@ -16,7 +16,6 @@ const AboutMe = () => {
           <span className="text-orange-500 font-semibold">
             C, C#, Python, JavaScript, Kotlin, entre otros.
           </span>
-          .
         </p>
         <p className="w-[90%] sm:w-[80%] text-[1.2em] md:text-lg mt-2 md:mt-4">
           Durante mi recorrido trabajé con distintos entornos y frameworks como{" "}
