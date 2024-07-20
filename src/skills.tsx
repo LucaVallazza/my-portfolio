@@ -1,15 +1,18 @@
-import { Braces, Database, LucideProps, Palette } from "lucide-react";
+import { Braces, Database, LucideProps, Palette, Slice } from "lucide-react";
 import ProgressBar from "./components/progress-bar";
 import Heading from "./components/heading";
 import './skills.css'
+import SkillsList from "./components/SkillsList";
 
 
 interface IItem {
   name: string;
   level: number;
   exp: number;
+  path? : string;
+  imgClasses? : string;
 }
-interface ISkills {
+export interface ISkills {
   title: string;
   titleIcon: React.ForwardRefExoticComponent<
     Omit<LucideProps, "ref"> & React.RefAttributes<SVGSVGElement>
@@ -26,10 +29,10 @@ const Skills = () => {
       title: "Front end",
       titleIcon: Palette,
       items: [
-        { name: "React", level: 8, exp: 2 },
-        { name: "CSS", level: 7, exp: 2 },
-        { name: "Next.js", level: 7, exp: 1 },
-        { name: "Angular", level: 6, exp:1 },
+        { name: "React", level: 8, exp: 2, path: '../public/logos/React.svg', imgClasses: "black" },
+        { name: "CSS", level: 7, exp: 2, path: '../public/logos/CSS3_logo_and_wordmark.svg' },
+        { name: "Next.js", level: 7, exp: 1, path: '../public/logos/nextjs-icon-svgrepo-com.svg'},
+        { name: "Angular", level: 6, exp:1, path: '../public/logos/logo-angular-svgrepo-com.svg' },
       ],
     },
     {
@@ -62,42 +65,7 @@ const Skills = () => {
         
         <Heading>Habilidades</Heading>
 
-        <div className="flex flex-row justify-around w-full">
-
-          {skills.map((s) => (
-            <div className="flex-1 px-3  lg:px-10 2xl:px-16 flex flex-col   justify-start sm:items-center ">
-              <div className="flex flex-col sm:flex-row items-center mb-2 ">
-                <s.titleIcon size={22} className="sm:mr-2 block "></s.titleIcon>
-                <h3 className="text-sm text-center sm:text-lg xl:text-2xl font-semibold">{s.title}</h3>
-              </div>
-              <ul className="w-full">
-                {s.items.map((item) => {
-                  return (
-                    <>
-                      <li className="mb-1 md:mb-2 skill transition-all transition-transform duration-800"
-                      style={{ backfaceVisibility: "hidden" } as React.CSSProperties}  >
-                        <div className="flex flex-row text-xs sm:text-[1em] sm:pb-1 justify-between">
-                          <div>{item.name}</div>
-                          <div className="text-gray-300 block italic text-[0.75em] sm:text-[0.7em]">
-                            {item.exp > 1
-                              ? `${item.exp} años`
-                              : `${item.exp} año`}
-                          </div>
-                        </div>
-                        <div className="hidden sm:block">
-                          <ProgressBar progress={item.level * 10 }></ProgressBar>
-                        </div>
-                      </li>
-                    </>
-                  );
-                })}
-              </ul>
-            </div>
-          ))
-          }
-
-        </div>
-
+        <SkillsList skills={skills}></SkillsList>
       </div>
     </div>
   );

@@ -9,3 +9,19 @@
 .skill:hover * .bar{
     height: .8em;
 }
+
+.icon .black{
+    filter: brightness(0%);
+    
+}
+
+.icon{
+    mix-blend-mode: multiply;
+
+    
+}   
+
+.icon-svg, .icon-svg path, .icon-svg g{
+    stroke: white;
+    stroke-width: 2;
+}
