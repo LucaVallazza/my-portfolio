@@ -1,28 +1,6 @@
 import { ISkills } from "../skills";
-import ProgressBar from "./progress-bar";
 
 const SkillsMobile = ({skills} : {skills : ISkills[]}) => {
-
-  const onLoadIcon = (e) =>{
-      
-    // const svg = e.target.contentDocument ? e.target.contentDocument.querySelector('svg') : undefined;
-
-    // svg.setAttribute('fill' , 'white')
-
-    // if(svg){
-    //   svg.classList.add('icon-svg')
-
-    //   svg.querySelectorAll('path').forEach(path => {
-    //     path.setAttribute('fill'  , 'white')
-    //   })
-    //   svg.querySelectorAll('g').forEach(path => {
-    //     path.setAttribute('stroke'  , 'white')
-    //   })
-    //   svg.querySelectorAll('circle').forEach(path => {
-    //     path.setAttribute('stroke'  , 'white')
-    //   })
-    // }
-  }
 
   return (
     <div>
@@ -50,7 +28,7 @@ const SkillsMobile = ({skills} : {skills : ISkills[]}) => {
                       <span className="text-[1.3em] font-semibold">{item.name}</span>
                       </div>
 
-                      <span className="block m-0 p-0 bg-red-500 text-[0.8em] italic text-gray-200">{item.exp} {item.exp > 1 ? 'años' : 'año'  }</span>
+                      <span className="block m-0 p-0 text-[0.8em] italic text-gray-200">{item.exp} {item.exp > 1 ? 'años' : 'año'  }</span>
                       
                     </div>
                   </li>

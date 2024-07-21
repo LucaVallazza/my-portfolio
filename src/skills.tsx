@@ -1,5 +1,4 @@
-import { Braces, Database, LucideProps, Palette, Slice } from "lucide-react";
-import ProgressBar from "./components/progress-bar";
+import { Braces, Database, LucideProps, Palette } from "lucide-react";
 import Heading from "./components/heading";
 import './skills.css'
 import SkillsList from "./components/SkillsList";
